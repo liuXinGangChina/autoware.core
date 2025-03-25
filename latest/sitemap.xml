@@ -106,11 +106,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://autowarefoundation.github.io/autoware_core/latest/demos/autoware_test_node/</loc>
-         <lastmod>2025-03-25</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://autowarefoundation.github.io/autoware_core/latest/localization/autoware_ekf_localizer/</loc>
          <lastmod>2025-03-25</lastmod>
          <changefreq>daily</changefreq>
@@ -146,6 +141,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://autowarefoundation.github.io/autoware_core/latest/planning/autoware_velocity_smoother/</loc>
+         <lastmod>2025-03-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://autowarefoundation.github.io/autoware_core/latest/sensing/autoware_crop_box_filter/</loc>
          <lastmod>2025-03-25</lastmod>
          <changefreq>daily</changefreq>
@@ -162,6 +162,11 @@
     </url>
     <url>
          <loc>https://autowarefoundation.github.io/autoware_core/latest/testing/autoware_pyplot/</loc>
+         <lastmod>2025-03-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/autoware_core/latest/testing/autoware_test_node/</loc>
          <lastmod>2025-03-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
