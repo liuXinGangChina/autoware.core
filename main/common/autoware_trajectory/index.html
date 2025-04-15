@@ -3975,6 +3975,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#pretty_build" class="md-nav__link">
+    pretty_build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#use-custom-interpolator" class="md-nav__link">
     use custom Interpolator
   </a>
@@ -3998,6 +4005,13 @@
           <li class="md-nav__item">
   <a href="#insert-and-set-velocity-profile" class="md-nav__link">
     Insert and set velocity profile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore-points" class="md-nav__link">
+    Restore points
   </a>
   
 </li>
@@ -4040,12 +4054,7 @@
 <p><img alt="interpolators" src="images/overview/interpolators.drawio.svg">
 <a href="https://app.diagrams.net/?lightbox=1#Uhttps%3A%2F%2Fautowarefoundation.github.io%2Fautoware_core%2Fmain%2Fcommon%2Fautoware_trajectory%2Fimages%2Foverview%2Finterpolators.drawio.svg">View in Drawio</a></p>
 <p>The builder internally executes interpolation and return the result in the form of <code>expected&lt;T, E&gt;</code>. If successful, it contains the interpolator object.</p>
-<div class="highlight"><span class="filename">./examples/example_readme.cpp:48:67</span><pre><span></span><code><span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="p">[</span><span class="n">fig</span><span class="p">,</span><span class="w"> </span><span class="n">ax</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">();</span>
-
-<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">autoware</span><span class="o">::</span><span class="n">experimental</span><span class="o">::</span><span class="n">trajectory</span><span class="o">::</span><span class="n">interpolator</span><span class="o">::</span><span class="n">CubicSpline</span><span class="p">;</span>
-<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">autoware</span><span class="o">::</span><span class="n">experimental</span><span class="o">::</span><span class="n">trajectory</span><span class="o">::</span><span class="n">interpolator</span><span class="o">::</span><span class="n">InterpolationFailure</span><span class="p">;</span>
-
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">xs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0</span><span class="p">,</span><span class="w"> </span><span class="mf">4.0</span><span class="p">,</span><span class="w"> </span><span class="mf">5.0</span><span class="p">};</span>
+<div class="highlight"><span class="filename">./examples/example_readme.cpp:53:68</span><pre><span></span><code><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">xs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0</span><span class="p">,</span><span class="w"> </span><span class="mf">4.0</span><span class="p">,</span><span class="w"> </span><span class="mf">5.0</span><span class="p">};</span>
 <span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ys</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">0.0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">noise</span><span class="p">(),</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">noise</span><span class="p">(),</span><span class="w"> </span><span class="mf">2.0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">noise</span><span class="p">(),</span>
 <span class="w">                            </span><span class="mf">3.0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">noise</span><span class="p">(),</span><span class="w"> </span><span class="mf">4.0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">noise</span><span class="p">(),</span><span class="w"> </span><span class="mf">5.0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">noise</span><span class="p">()};</span>
 
@@ -4060,6 +4069,7 @@
 <span class="w">  </span><span class="c1">// for this interpolator</span>
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">result</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
 </code></pre></div>
 <p>Otherwise it contains the error object representing the failure reason. In the below snippet, cubic spline interpolation fails because the number of input points is 3, which is below the <code>minimum_required_points() = 4</code> of <code>CubicSpline</code>.</p>
 <div class="highlight"><span class="filename">./examples/example_readme.cpp:109:119</span><pre><span></span><code><span class="w">  </span><span class="c1">// Give only 3 points for CubicSpline, which is infeasible</span>
@@ -4466,6 +4476,16 @@
 <td>Following <a href="#derivation-of-shift">formulation</a>, return a shifted <code>Trajectory</code> object if the parameters are feasible, otherwise return <code>Error</code> object indicating error reason(i.e. <span class="arithmatex">\(T_j\)</span> becomes negative, <span class="arithmatex">\(j\)</span> becomes negative, etc.).</td>
 <td>For derivation, see <a href="#derivation-of-shift">formulation</a>.<br>The example code for this plot is found <a href="#shift-trajectory">example</a></td>
 </tr>
+<tr>
+<td><code>&lt;autoware/trajectory/utils/pretty_build.hpp&gt;</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><ul><li><code>pretty_build</code></li></ul></td>
+<td>A convenient function that will <strong>almost surely succeed</strong> in constructing a Trajectory class unless the given points size is 0 or 1.<br>Input points are interpolated to 3 points using <code>Linear</code> and to 4 points using <code>Cubic</code> so that it returns<br><ul><li><code>Cubic</code> interpolated Trajectory class(by default), or</li><li><code>Akima</code> interpolated class if the parameter <code>use_akima = true</code></li></ul>All of the properties are interpolated by <code>default</code> interpolators setting.<br>You may need to call <code>align_orientation_with_trajectory_direction</code> if you did not give desired orientation.</td>
+<td><img alt="pretty_trajectory" src="images/utils/pretty_trajectory.drawio.svg"><a href="https://app.diagrams.net/?lightbox=1#Uhttps%3A%2F%2Fautowarefoundation.github.io%2Fautoware_core%2Fmain%2Fcommon%2Fautoware_trajectory%2Fimages%2Futils%2Fpretty_trajectory.drawio.svg">View in Drawio</a></td>
+</tr>
 </tbody>
 </table>
 <h4 id="derivation-of-shift">Derivation of <code>shift</code><a class="headerlink" href="#derivation-of-shift" title="Permanent link">#</a></h4>
@@ -4519,6 +4539,14 @@ s_{3} &amp;= L_{\mathrm{lon}}, &amp; l_{3} &amp;= L
 \end{align}
 \]</div>
 <h2 id="example-usage">Example Usage<a class="headerlink" href="#example-usage" title="Permanent link">#</a></h2>
+<h3 id="pretty_build"><code>pretty_build</code><a class="headerlink" href="#pretty_build" title="Permanent link">#</a></h3>
+<p><code>pretty_build</code> is a convenient wrapper tailored for most Autoware Planning/Control component, which will never fail to interpolate unless the given points size is 0 or 1.</p>
+<div class="highlight"><span class="filename">./examples/example_pretty_build.cpp:93:97</span><pre><span></span><code><span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">trajectory_opt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">autoware</span><span class="o">::</span><span class="n">experimental</span><span class="o">::</span><span class="n">trajectory</span><span class="o">::</span><span class="n">pretty_build</span><span class="p">(</span><span class="n">points</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">trajectory_opt</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">trajectory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">trajectory_opt</span><span class="p">.</span><span class="n">value</span><span class="p">();</span>
+</code></pre></div>
 <h3 id="use-custom-interpolator">use custom Interpolator<a class="headerlink" href="#use-custom-interpolator" title="Permanent link">#</a></h3>
 <p>You can also specify interpolation method to <code>Builder{}</code> before calling <code>.build(points)</code></p>
 <div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">autoware</span><span class="o">::</span><span class="n">experimental</span><span class="o">::</span><span class="n">trajectory</span><span class="o">::</span><span class="n">interpolator</span><span class="o">::</span><span class="n">CubicSpline</span><span class="p">;</span>
@@ -4559,13 +4587,9 @@ s_{3} &amp;= L_{\mathrm{lon}}, &amp; l_{3} &amp;= L
 <p>Set 3.0[m] ~ 5.0[m] part of velocity to 0.0</p>
 <div class="highlight"><pre><span></span><code><span class="n">trajectory</span><span class="o">-&gt;</span><span class="n">longitudinal_velocity_mps</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span><span class="w"> </span><span class="mf">5.0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
 </code></pre></div>
-<ul>
-<li>
-<p>Restore points</p>
+<h3 id="restore-points">Restore points<a class="headerlink" href="#restore-points" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">autoware_planning_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PathPoint</span><span class="o">&gt;</span><span class="w"> </span><span class="n">points</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">trajectory</span><span class="o">-&gt;</span><span class="n">restore</span><span class="p">();</span>
-</code></pre></div>
-</li>
-</ul></div>
+</code></pre></div></div>
 
 
 
