@@ -4150,6 +4150,16 @@
 <td><code>curvature</code> is computed <strong>using only X-Y 2D coordinate</strong>. This is based on the normal and natural assumption that <em>roads are flat</em>. Mathematically, it asserts that <a href="https://en.wikipedia.org/wiki/Gaussian_curvature">Gaussian curvature</a> of road is uniformly 0.<br>The sign of curvature is positive if the center of turning circle is on the left side, otherwise negative.</td>
 <td><img alt="curvature" src="images/nomenclature/curvature.drawio.svg"><br><a href="https://app.diagrams.net/?lightbox=1#Uhttps%3A%2F%2Fautowarefoundation.github.io%2Fautoware_core%2Fmain%2Fcommon%2Fautoware_trajectory%2Fimages%2Fnomenclature%2Fcurvature.drawio.svg">View in Drawio</a></td>
 </tr>
+<tr>
+<td><code>k_points_minimum_dist_threshold</code></td>
+<td>This is a constant threshold that is used to check if two points or values are same and to avoid zero division.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>almost-same</code></td>
+<td>The pair of two points <span class="arithmatex">\(P_{1}\)</span> and <span class="arithmatex">\(P_{2}\)</span>, or the pair of two base values <span class="arithmatex">\(s_{1}\)</span> and <span class="arithmatex">\(s_{2}\)</span> are called <code>almost-same</code> if their distance or difference are less than <code>k_points_minimum_dist_threshold</code></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="api">API<a class="headerlink" href="#api" title="Permanent link">#</a></h2>
