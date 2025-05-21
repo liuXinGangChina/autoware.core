@@ -176,6 +176,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://autowarefoundation.github.io/autoware_core/latest/perception/autoware_euclidean_cluster_object_detector/</loc>
+         <lastmod>2025-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://autowarefoundation.github.io/autoware_core/latest/perception/autoware_ground_filter/</loc>
          <lastmod>2025-05-21</lastmod>
          <changefreq>daily</changefreq>
