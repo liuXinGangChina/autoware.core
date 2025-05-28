@@ -3434,6 +3434,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -3572,14 +3574,14 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../sensing/autoware_gnss_poser/">Autoware gnss poser</a>
+          <a href="../../../sensing/autoware_downsample_filters/">Autoware downsample filters</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_8_3">
           <span class="md-nav__icon md-icon"></span>
-          Autoware gnss poser
+          Autoware downsample filters
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -3620,12 +3622,60 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../sensing/autoware_vehicle_velocity_converter/">Autoware vehicle velocity converter</a>
+          <a href="../../../sensing/autoware_gnss_poser/">Autoware gnss poser</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_8_4">
+          <span class="md-nav__icon md-icon"></span>
+          Autoware gnss poser
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_5" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../sensing/autoware_vehicle_velocity_converter/">Autoware vehicle velocity converter</a>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_5">
           <span class="md-nav__icon md-icon"></span>
           Autoware vehicle velocity converter
         </label>
@@ -4231,7 +4281,7 @@ If the acceleration is less than <code>common.min_strong_accel</code>, the stop 
 <h3 id="minor-functions">Minor functions<a class="headerlink" href="#minor-functions" title="Permanent link">#</a></h3>
 <h4 id="prioritization-of-behavior-modules-stop-point">Prioritization of behavior module's stop point<a class="headerlink" href="#prioritization-of-behavior-modules-stop-point" title="Permanent link">#</a></h4>
 <p>When stopping for a pedestrian walking on the crosswalk, the behavior module inserts the zero velocity in the trajectory in front of the crosswalk.
-Also <code>autoware_obstacle_cruise_planner</code>'s stop planning also works, and the ego may not reach the behavior module's stop point since the safe distance defined in <code>autoware_obstacle_cruise_planner</code> may be longer than the behavior module's safe distance.
+Also <code>obstacle_cruise_module</code>'s stop planning also works, and the ego may not reach the behavior module's stop point since the safe distance defined in <code>obstacle_cruise_module</code> may be longer than the behavior module's safe distance.
 To resolve this non-alignment of the stop point between the behavior module and this module, <code>stop_planning.min_behavior_stop_margin</code> is defined.
 In the case of the crosswalk described above, this module inserts the stop point with a distance <code>stop_planning.min_behavior_stop_margin</code> at minimum between the ego and obstacle.</p>
 <h4 id="a-function-to-keep-the-closest-stop-obstacle-in-target-obstacles">A function to keep the closest stop obstacle in target obstacles<a class="headerlink" href="#a-function-to-keep-the-closest-stop-obstacle-in-target-obstacles" title="Permanent link">#</a></h4>
