@@ -8,27 +8,27 @@
       
       
       
-        <link rel="canonical" href="https://autowarefoundation.github.io/autoware_core/latest/localization/autoware_ndt_scan_matcher/include/autoware/ndt_scan_matcher/ndt_omp/">
+        <link rel="canonical" href="https://autowarefoundation.github.io/autoware_core/latest/localization/autoware_pose_initializer/">
       
       
-        <link rel="prev" href="../../../../">
+        <link rel="prev" href="../autoware_ndt_scan_matcher/include/autoware/ndt_scan_matcher/ndt_omp/">
       
       
-        <link rel="next" href="../../../../../autoware_pose_initializer/">
+        <link rel="next" href="../autoware_stop_filter/">
       
-      <link rel="icon" href="../../../../../../docs/assets/images/autoware-foundation.png">
+      <link rel="icon" href="../../docs/assets/images/autoware-foundation.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.20">
     
     
       
-        <title>ndt_omp - Autoware Core Documentation</title>
+        <title>autoware_pose_initializer - Autoware Core Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.eebd395e.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -44,11 +44,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../docs/assets/css/extra.css">
+      <link rel="stylesheet" href="../../docs/assets/css/extra.css">
     
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     
-    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ndt_omp" class="md-skip">
+        <a href="#autoware_pose_initializer" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../../.." title="Autoware Core Documentation" class="md-header__button md-logo" aria-label="Autoware Core Documentation" data-md-component="logo">
+    <a href="../.." title="Autoware Core Documentation" class="md-header__button md-logo" aria-label="Autoware Core Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M135.2 117.4 109.1 192h293.8l-26.1-74.6c-4.5-12.8-16.6-21.4-30.2-21.4H165.4c-13.6 0-25.7 8.6-30.2 21.4zm-95.6 79.4L74.8 96.3C88.3 57.8 124.6 32 165.4 32h181.2c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2v192c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32v-48H96v48c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V256c0-26.7 16.4-49.6 39.6-59.2zM128 288a32 32 0 1 0-64 0 32 32 0 1 0 64 0zm288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ndt_omp
+              autoware_pose_initializer
             
           </span>
         </div>
@@ -214,7 +214,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../../autoware_core/" class="md-tabs__link">
+      <a href="../../autoware_core/" class="md-tabs__link">
         Autoware core
       </a>
     </li>
@@ -235,7 +235,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../../common/autoware_component_interface_specs/" class="md-tabs__link">
+      <a href="../../common/autoware_component_interface_specs/" class="md-tabs__link">
         Common
       </a>
     </li>
@@ -258,7 +258,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../../control/autoware_core_control/" class="md-tabs__link">
+      <a href="../../control/autoware_core_control/" class="md-tabs__link">
         Control
       </a>
     </li>
@@ -283,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../autoware_core_localization/" class="md-tabs__link md-tabs__link--active">
+      <a href="../autoware_core_localization/" class="md-tabs__link md-tabs__link--active">
         Localization
       </a>
     </li>
@@ -306,7 +306,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../../map/autoware_core_map/" class="md-tabs__link">
+      <a href="../../map/autoware_core_map/" class="md-tabs__link">
         Map
       </a>
     </li>
@@ -329,7 +329,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../../perception/autoware_core_perception/" class="md-tabs__link">
+      <a href="../../perception/autoware_core_perception/" class="md-tabs__link">
         Perception
       </a>
     </li>
@@ -352,7 +352,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../../planning/autoware_core_planning/" class="md-tabs__link">
+      <a href="../../planning/autoware_core_planning/" class="md-tabs__link">
         Planning
       </a>
     </li>
@@ -375,7 +375,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../../sensing/autoware_core_sensing/" class="md-tabs__link">
+      <a href="../../sensing/autoware_core_sensing/" class="md-tabs__link">
         Sensing
       </a>
     </li>
@@ -398,7 +398,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../../testing/autoware_planning_test_manager/" class="md-tabs__link">
+      <a href="../../testing/autoware_planning_test_manager/" class="md-tabs__link">
         Testing
       </a>
     </li>
@@ -421,7 +421,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../../vehicle/autoware_core_vehicle/" class="md-tabs__link">
+      <a href="../../vehicle/autoware_core_vehicle/" class="md-tabs__link">
         Vehicle
       </a>
     </li>
@@ -457,7 +457,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../../.." title="Autoware Core Documentation" class="md-nav__button md-logo" aria-label="Autoware Core Documentation" data-md-component="logo">
+    <a href="../.." title="Autoware Core Documentation" class="md-nav__button md-logo" aria-label="Autoware Core Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M135.2 117.4 109.1 192h293.8l-26.1-74.6c-4.5-12.8-16.6-21.4-30.2-21.4H165.4c-13.6 0-25.7 8.6-30.2 21.4zm-95.6 79.4L74.8 96.3C88.3 57.8 124.6 32 165.4 32h181.2c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2v192c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32v-48H96v48c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V256c0-26.7 16.4-49.6 39.6-59.2zM128 288a32 32 0 1 0-64 0 32 32 0 1 0 64 0zm288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>
@@ -508,7 +508,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../autoware_core/">Autoware core</a>
+          <a href="../../autoware_core/">Autoware core</a>
           
         </div>
       
@@ -618,7 +618,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../common/autoware_component_interface_specs/">Autoware component interface specs</a>
+          <a href="../../common/autoware_component_interface_specs/">Autoware component interface specs</a>
           
         </div>
       
@@ -666,7 +666,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../common/autoware_geography_utils/">Autoware geography utils</a>
+          <a href="../../common/autoware_geography_utils/">Autoware geography utils</a>
           
         </div>
       
@@ -727,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../common/autoware_global_parameter_loader/Readme/" class="md-nav__link">
+      <a href="../../common/autoware_global_parameter_loader/Readme/" class="md-nav__link">
         Autoware Global Parameter Loader
       </a>
     </li>
@@ -770,7 +770,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../common/autoware_interpolation/">Autoware interpolation</a>
+          <a href="../../common/autoware_interpolation/">Autoware interpolation</a>
           
         </div>
       
@@ -818,7 +818,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../common/autoware_kalman_filter/">Autoware kalman filter</a>
+          <a href="../../common/autoware_kalman_filter/">Autoware kalman filter</a>
           
         </div>
       
@@ -866,7 +866,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../common/autoware_lanelet2_utils/">Autoware lanelet2 utils</a>
+          <a href="../../common/autoware_lanelet2_utils/">Autoware lanelet2 utils</a>
           
         </div>
       
@@ -916,7 +916,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../common/autoware_motion_utils/">Autoware motion utils</a>
+          <a href="../../common/autoware_motion_utils/">Autoware motion utils</a>
           
             <label for="__nav_2_7">
               <span class="md-nav__icon md-icon"></span>
@@ -1005,7 +1005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../common/autoware_motion_utils/docs/vehicle/vehicle/" class="md-nav__link">
+      <a href="../../common/autoware_motion_utils/docs/vehicle/vehicle/" class="md-nav__link">
         vehicle utils
       </a>
     </li>
@@ -1062,7 +1062,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../common/autoware_node/">Autoware node</a>
+          <a href="../../common/autoware_node/">Autoware node</a>
           
         </div>
       
@@ -1110,7 +1110,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../common/autoware_object_recognition_utils/">Autoware object recognition utils</a>
+          <a href="../../common/autoware_object_recognition_utils/">Autoware object recognition utils</a>
           
         </div>
       
@@ -1204,7 +1204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../common/autoware_osqp_interface/design/osqp_interface-design/" class="md-nav__link">
+      <a href="../../common/autoware_osqp_interface/design/osqp_interface-design/" class="md-nav__link">
         Interface for the OSQP library
       </a>
     </li>
@@ -1254,7 +1254,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../common/autoware_point_types/">Autoware point types</a>
+          <a href="../../common/autoware_point_types/">Autoware point types</a>
           
         </div>
       
@@ -1348,7 +1348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../common/autoware_qp_interface/design/qp_interface-design/" class="md-nav__link">
+      <a href="../../common/autoware_qp_interface/design/qp_interface-design/" class="md-nav__link">
         Interface for QP solvers
       </a>
     </li>
@@ -1400,7 +1400,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../common/autoware_signal_processing/">Autoware signal processing</a>
+          <a href="../../common/autoware_signal_processing/">Autoware signal processing</a>
           
             <label for="__nav_2_13">
               <span class="md-nav__icon md-icon"></span>
@@ -1456,7 +1456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../common/autoware_signal_processing/documentation/ButterworthFilter/" class="md-nav__link">
+      <a href="../../common/autoware_signal_processing/documentation/ButterworthFilter/" class="md-nav__link">
         ButterworthFilter
       </a>
     </li>
@@ -1506,7 +1506,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../common/autoware_trajectory/">Autoware trajectory</a>
+          <a href="../../common/autoware_trajectory/">Autoware trajectory</a>
           
         </div>
       
@@ -1554,7 +1554,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../common/autoware_vehicle_info_utils/">Autoware vehicle info utils</a>
+          <a href="../../common/autoware_vehicle_info_utils/">Autoware vehicle info utils</a>
           
         </div>
       
@@ -1645,7 +1645,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../control/autoware_core_control/">Autoware core control</a>
+          <a href="../../control/autoware_core_control/">Autoware core control</a>
           
         </div>
       
@@ -1693,7 +1693,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../control/autoware_simple_pure_pursuit/">Autoware simple pure pursuit</a>
+          <a href="../../control/autoware_simple_pure_pursuit/">Autoware simple pure pursuit</a>
           
         </div>
       
@@ -1796,7 +1796,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../autoware_core_localization/">Autoware core localization</a>
+          <a href="../autoware_core_localization/">Autoware core localization</a>
           
         </div>
       
@@ -1844,7 +1844,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../autoware_ekf_localizer/">Autoware ekf localizer</a>
+          <a href="../autoware_ekf_localizer/">Autoware ekf localizer</a>
           
         </div>
       
@@ -1892,7 +1892,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../autoware_gyro_odometer/">Autoware gyro odometer</a>
+          <a href="../autoware_gyro_odometer/">Autoware gyro odometer</a>
           
         </div>
       
@@ -1940,7 +1940,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../autoware_localization_util/">Autoware localization util</a>
+          <a href="../autoware_localization_util/">Autoware localization util</a>
           
         </div>
       
@@ -1964,18 +1964,18 @@
               
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" checked>
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5" >
       
       
         
@@ -1990,7 +1990,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../">Autoware ndt scan matcher</a>
+          <a href="../autoware_ndt_scan_matcher/">Autoware ndt scan matcher</a>
           
             <label for="__nav_4_5">
               <span class="md-nav__icon md-icon"></span>
@@ -1998,7 +1998,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_5">
           <span class="md-nav__icon md-icon"></span>
           Autoware ndt scan matcher
@@ -2011,16 +2011,16 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_2" checked>
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5_2" >
       
       
         
@@ -2033,7 +2033,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_2_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_5_2">
           <span class="md-nav__icon md-icon"></span>
           Include
@@ -2044,16 +2044,16 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_2_1" checked>
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5_2_1" >
       
       
         
@@ -2066,7 +2066,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_5_2_1_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_5_2_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_5_2_1">
           <span class="md-nav__icon md-icon"></span>
           Autoware
@@ -2077,16 +2077,16 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_2_1_1" checked>
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5_2_1_1" >
       
       
         
@@ -2099,7 +2099,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_5_2_1_1_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_5_2_1_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_5_2_1_1">
           <span class="md-nav__icon md-icon"></span>
           Ndt scan matcher
@@ -2110,16 +2110,16 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_2_1_1_1" checked>
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5_2_1_1_1" >
       
       
         
@@ -2131,12 +2131,12 @@
       
         
         
-        <div class="md-nav__link md-nav__link--index md-nav__link--active">
-          <a href="./">Ndt omp</a>
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../autoware_ndt_scan_matcher/include/autoware/ndt_scan_matcher/ndt_omp/">Ndt omp</a>
           
         </div>
       
-      <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_5_2_1_1_1_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_5_2_1_1_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_5_2_1_1_1">
           <span class="md-nav__icon md-icon"></span>
           Ndt omp
@@ -2184,18 +2184,18 @@
               
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_6" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" checked>
       
       
         
@@ -2207,12 +2207,12 @@
       
         
         
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../autoware_pose_initializer/">Autoware pose initializer</a>
+        <div class="md-nav__link md-nav__link--index md-nav__link--active">
+          <a href="./">Autoware pose initializer</a>
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4_6">
           <span class="md-nav__icon md-icon"></span>
           Autoware pose initializer
@@ -2256,7 +2256,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../autoware_stop_filter/">Autoware stop filter</a>
+          <a href="../autoware_stop_filter/">Autoware stop filter</a>
           
         </div>
       
@@ -2304,7 +2304,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../autoware_twist2accel/">Autoware twist2accel</a>
+          <a href="../autoware_twist2accel/">Autoware twist2accel</a>
           
         </div>
       
@@ -2401,7 +2401,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../map/autoware_core_map/">Autoware core map</a>
+          <a href="../../map/autoware_core_map/">Autoware core map</a>
           
         </div>
       
@@ -2449,7 +2449,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../map/autoware_lanelet2_map_visualizer/">Autoware lanelet2 map visualizer</a>
+          <a href="../../map/autoware_lanelet2_map_visualizer/">Autoware lanelet2 map visualizer</a>
           
         </div>
       
@@ -2497,7 +2497,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../map/autoware_map_height_fitter/">Autoware map height fitter</a>
+          <a href="../../map/autoware_map_height_fitter/">Autoware map height fitter</a>
           
         </div>
       
@@ -2545,7 +2545,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../map/autoware_map_loader/">Autoware map loader</a>
+          <a href="../../map/autoware_map_loader/">Autoware map loader</a>
           
         </div>
       
@@ -2593,7 +2593,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../map/autoware_map_projection_loader/">Autoware map projection loader</a>
+          <a href="../../map/autoware_map_projection_loader/">Autoware map projection loader</a>
           
         </div>
       
@@ -2688,7 +2688,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../perception/autoware_core_perception/">Autoware core perception</a>
+          <a href="../../perception/autoware_core_perception/">Autoware core perception</a>
           
         </div>
       
@@ -2736,7 +2736,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../perception/autoware_euclidean_cluster_object_detector/">Autoware euclidean cluster object detector</a>
+          <a href="../../perception/autoware_euclidean_cluster_object_detector/">Autoware euclidean cluster object detector</a>
           
         </div>
       
@@ -2786,7 +2786,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../perception/autoware_ground_filter/">Autoware ground filter</a>
+          <a href="../../perception/autoware_ground_filter/">Autoware ground filter</a>
           
             <label for="__nav_6_3">
               <span class="md-nav__icon md-icon"></span>
@@ -2842,7 +2842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../perception/autoware_ground_filter/docs/ground-filter/" class="md-nav__link">
+      <a href="../../perception/autoware_ground_filter/docs/ground-filter/" class="md-nav__link">
         Autoware Ground Filter
       </a>
     </li>
@@ -2892,7 +2892,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../perception/autoware_perception_objects_converter/">Autoware perception objects converter</a>
+          <a href="../../perception/autoware_perception_objects_converter/">Autoware perception objects converter</a>
           
         </div>
       
@@ -2999,7 +2999,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../planning/autoware_core_planning/">Autoware core planning</a>
+          <a href="../../planning/autoware_core_planning/">Autoware core planning</a>
           
         </div>
       
@@ -3047,7 +3047,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../planning/autoware_mission_planner/">Autoware mission planner</a>
+          <a href="../../planning/autoware_mission_planner/">Autoware mission planner</a>
           
         </div>
       
@@ -3095,7 +3095,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../planning/autoware_objects_of_interest_marker_interface/">Autoware objects of interest marker interface</a>
+          <a href="../../planning/autoware_objects_of_interest_marker_interface/">Autoware objects of interest marker interface</a>
           
         </div>
       
@@ -3143,7 +3143,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../planning/autoware_path_generator/">Autoware path generator</a>
+          <a href="../../planning/autoware_path_generator/">Autoware path generator</a>
           
         </div>
       
@@ -3191,7 +3191,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../planning/autoware_planning_factor_interface/">Autoware planning factor interface</a>
+          <a href="../../planning/autoware_planning_factor_interface/">Autoware planning factor interface</a>
           
         </div>
       
@@ -3239,7 +3239,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../planning/autoware_planning_topic_converter/">Autoware planning topic converter</a>
+          <a href="../../planning/autoware_planning_topic_converter/">Autoware planning topic converter</a>
           
         </div>
       
@@ -3287,7 +3287,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../planning/autoware_route_handler/">Autoware route handler</a>
+          <a href="../../planning/autoware_route_handler/">Autoware route handler</a>
           
         </div>
       
@@ -3335,7 +3335,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../planning/autoware_velocity_smoother/">Autoware velocity smoother</a>
+          <a href="../../planning/autoware_velocity_smoother/">Autoware velocity smoother</a>
           
         </div>
       
@@ -3420,7 +3420,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../planning/behavior_velocity_planner/autoware_behavior_velocity_planner/">Autoware behavior velocity planner</a>
+          <a href="../../planning/behavior_velocity_planner/autoware_behavior_velocity_planner/">Autoware behavior velocity planner</a>
           
         </div>
       
@@ -3466,7 +3466,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../planning/behavior_velocity_planner/autoware_behavior_velocity_planner_common/">Autoware behavior velocity planner common</a>
+          <a href="../../planning/behavior_velocity_planner/autoware_behavior_velocity_planner_common/">Autoware behavior velocity planner common</a>
           
         </div>
       
@@ -3512,7 +3512,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../planning/behavior_velocity_planner/autoware_behavior_velocity_stop_line_module/">Autoware behavior velocity stop line module</a>
+          <a href="../../planning/behavior_velocity_planner/autoware_behavior_velocity_stop_line_module/">Autoware behavior velocity stop line module</a>
           
         </div>
       
@@ -3604,7 +3604,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../planning/motion_velocity_planner/autoware_motion_velocity_obstacle_stop_module/">Autoware motion velocity obstacle stop module</a>
+          <a href="../../planning/motion_velocity_planner/autoware_motion_velocity_obstacle_stop_module/">Autoware motion velocity obstacle stop module</a>
           
         </div>
       
@@ -3650,7 +3650,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../planning/motion_velocity_planner/autoware_motion_velocity_planner/">Autoware motion velocity planner</a>
+          <a href="../../planning/motion_velocity_planner/autoware_motion_velocity_planner/">Autoware motion velocity planner</a>
           
         </div>
       
@@ -3696,7 +3696,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../planning/motion_velocity_planner/autoware_motion_velocity_planner_common/">Autoware motion velocity planner common</a>
+          <a href="../../planning/motion_velocity_planner/autoware_motion_velocity_planner_common/">Autoware motion velocity planner common</a>
           
         </div>
       
@@ -3800,7 +3800,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../sensing/autoware_core_sensing/">Autoware core sensing</a>
+          <a href="../../sensing/autoware_core_sensing/">Autoware core sensing</a>
           
         </div>
       
@@ -3848,7 +3848,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../sensing/autoware_crop_box_filter/">Autoware crop box filter</a>
+          <a href="../../sensing/autoware_crop_box_filter/">Autoware crop box filter</a>
           
         </div>
       
@@ -3896,7 +3896,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../sensing/autoware_downsample_filters/">Autoware downsample filters</a>
+          <a href="../../sensing/autoware_downsample_filters/">Autoware downsample filters</a>
           
         </div>
       
@@ -3944,7 +3944,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../sensing/autoware_gnss_poser/">Autoware gnss poser</a>
+          <a href="../../sensing/autoware_gnss_poser/">Autoware gnss poser</a>
           
         </div>
       
@@ -3992,7 +3992,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../sensing/autoware_vehicle_velocity_converter/">Autoware vehicle velocity converter</a>
+          <a href="../../sensing/autoware_vehicle_velocity_converter/">Autoware vehicle velocity converter</a>
           
         </div>
       
@@ -4089,7 +4089,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../testing/autoware_planning_test_manager/">Autoware planning test manager</a>
+          <a href="../../testing/autoware_planning_test_manager/">Autoware planning test manager</a>
           
         </div>
       
@@ -4137,7 +4137,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../testing/autoware_pyplot/">Autoware pyplot</a>
+          <a href="../../testing/autoware_pyplot/">Autoware pyplot</a>
           
         </div>
       
@@ -4185,7 +4185,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../testing/autoware_test_node/">Autoware test node</a>
+          <a href="../../testing/autoware_test_node/">Autoware test node</a>
           
         </div>
       
@@ -4233,7 +4233,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../testing/autoware_test_utils/">Autoware test utils</a>
+          <a href="../../testing/autoware_test_utils/">Autoware test utils</a>
           
         </div>
       
@@ -4327,7 +4327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../testing/autoware_testing/design/autoware_testing-design/" class="md-nav__link">
+      <a href="../../testing/autoware_testing/design/autoware_testing-design/" class="md-nav__link">
         autoware_testing
       </a>
     </li>
@@ -4418,7 +4418,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../../vehicle/autoware_core_vehicle/">Autoware core vehicle</a>
+          <a href="../../vehicle/autoware_core_vehicle/">Autoware core vehicle</a>
           
         </div>
       
@@ -4464,6 +4464,137 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interfaces" class="md-nav__link">
+    Interfaces
+  </a>
+  
+    <nav class="md-nav" aria-label="Interfaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#services" class="md-nav__link">
+    Services
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clients" class="md-nav__link">
+    Clients
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscriptions" class="md-nav__link">
+    Subscriptions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publications" class="md-nav__link">
+    Publications
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagnostics" class="md-nav__link">
+    Diagnostics
+  </a>
+  
+    <nav class="md-nav" aria-label="Diagnostics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pose_initializer_status" class="md-nav__link">
+    pose_initializer_status
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection-with-default-ad-api" class="md-nav__link">
+    Connection with Default AD API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initialize-pose-via-cli" class="md-nav__link">
+    Initialize pose via CLI
+  </a>
+  
+    <nav class="md-nav" aria-label="Initialize pose via CLI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-gnss-estimated-position" class="md-nav__link">
+    Using the GNSS estimated position
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-input-position" class="md-nav__link">
+    Using the input position
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#direct-initial-position-set" class="md-nav__link">
+    Direct initial position set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#via-ros2-topic-pub" class="md-nav__link">
+    Via ros2 topic pub
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4480,15 +4611,281 @@
   
 
 
-<div><h1 id="ndt_omp">ndt_omp<a class="headerlink" href="#ndt_omp" title="Permanent link">#</a></h1>
-<!---->
-
-cspell:ignore Kenji, Koide
-&lt;--&gt;
-
-<p>The codes in this directory are derived from <a href="https://github.com/tier4/ndt_omp">https://github.com/tier4/ndt_omp</a>, which is a fork of <a href="https://github.com/koide3/ndt_omp">https://github.com/koide3/ndt_omp</a>.</p>
-<p>We use this code in accordance with the LICENSE, and we have directly confirmed this with Dr. Kenji Koide.</p>
-<p>We sincerely appreciate Dr. Koide’s support and contributions.</p></div>
+<div><h1 id="autoware_pose_initializer">autoware_pose_initializer<a class="headerlink" href="#autoware_pose_initializer" title="Permanent link">#</a></h1>
+<h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">#</a></h2>
+<p>The <code>autoware_pose_initializer</code> is the package to send an initial pose to <code>ekf_localizer</code>.
+It receives roughly estimated initial pose from GNSS/user.
+Passing the pose to <code>ndt_scan_matcher</code>, and it gets a calculated ego pose from <code>ndt_scan_matcher</code> via service.
+Finally, it publishes the initial pose to <code>ekf_localizer</code>.
+This node depends on the map height fitter library.
+<a href="../../map/autoware_map_height_fitter/">See here for more details.</a></p>
+<h2 id="interfaces">Interfaces<a class="headerlink" href="#interfaces" title="Permanent link">#</a></h2>
+<h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+<th>Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>user_defined_initial_pose.enable</td>
+<td>string</td>
+<td>If true, user_defined_initial_pose.pose is set as the initial position. [boolean]</td>
+<td>false</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>user_defined_initial_pose.pose</td>
+<td>string</td>
+<td>initial pose (x, y, z, quat_x, quat_y, quat_z, quat_w). [array]</td>
+<td>[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0]</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>gnss_pose_timeout</td>
+<td>float</td>
+<td>The duration that the GNSS pose is valid. [sec]</td>
+<td>3.0</td>
+<td>≥0.0</td>
+</tr>
+<tr>
+<td>pose_error_check_enabled</td>
+<td>boolean</td>
+<td>If true, check error between initial pose result and GNSS pose.</td>
+<td>false</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>pose_error_threshold</td>
+<td>float</td>
+<td>The error threshold between GNSS and initial pose</td>
+<td>5.0</td>
+<td>≥0.0</td>
+</tr>
+<tr>
+<td>stop_check_enabled</td>
+<td>string</td>
+<td>If true, initialization is accepted only when the vehicle is stopped.</td>
+<td>true</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>stop_check_duration</td>
+<td>float</td>
+<td>The duration used for the stop check above. [sec]</td>
+<td>3.0</td>
+<td>≥0.0</td>
+</tr>
+<tr>
+<td>ekf_enabled</td>
+<td>string</td>
+<td>If true, EKF localizer is activated.</td>
+<td>true</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>gnss_enabled</td>
+<td>string</td>
+<td>If true, use the GNSS pose when no pose is specified.</td>
+<td>true</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>yabloc_enabled</td>
+<td>string</td>
+<td>If true, YabLocModule is used.</td>
+<td>true</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>ndt_enabled</td>
+<td>string</td>
+<td>If true, the pose will be estimated by NDT scan matcher, otherwise it is passed through.</td>
+<td>true</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>gnss_particle_covariance</td>
+<td>array</td>
+<td>gnss particle covariance</td>
+<td>[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.01, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.01, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.01, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 10.0]</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>output_pose_covariance</td>
+<td>array</td>
+<td>output pose covariance</td>
+<td>[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0,  0.0,  0.0,  0.0, 0.0, 0.0, 0.01, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.01, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.01, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.2]</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h3 id="services">Services<a class="headerlink" href="#services" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/localization/initialize</code></td>
+<td>autoware_internal_localization_msgs::srv::InitializeLocalization</td>
+<td>initial pose from api</td>
+</tr>
+</tbody>
+</table>
+<h3 id="clients">Clients<a class="headerlink" href="#clients" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/localization/pose_estimator/ndt_align_srv</code></td>
+<td>autoware_internal_localization_msgs::srv::PoseWithCovarianceStamped</td>
+<td>pose estimation service</td>
+</tr>
+<tr>
+<td><code>/localization/pose_estimator/yabloc/initializer/yabloc_align_srv</code></td>
+<td>autoware_internal_localization_msgs::srv::PoseWithCovarianceStamped</td>
+<td>yabloc pose estimation service</td>
+</tr>
+</tbody>
+</table>
+<h3 id="subscriptions">Subscriptions<a class="headerlink" href="#subscriptions" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/sensing/gnss/pose_with_covariance</code></td>
+<td>geometry_msgs::msg::PoseWithCovarianceStamped</td>
+<td>pose from gnss</td>
+</tr>
+<tr>
+<td><code>/sensing/vehicle_velocity_converter/twist_with_covariance</code></td>
+<td>geometry_msgs::msg::TwistStamped</td>
+<td>twist for stop check</td>
+</tr>
+</tbody>
+</table>
+<h3 id="publications">Publications<a class="headerlink" href="#publications" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/localization/initialization_state</code></td>
+<td>autoware_adapi_v1_msgs::msg::LocalizationInitializationState</td>
+<td>pose initialization state</td>
+</tr>
+<tr>
+<td><code>/initialpose3d</code></td>
+<td>geometry_msgs::msg::PoseWithCovarianceStamped</td>
+<td>calculated initial ego pose</td>
+</tr>
+<tr>
+<td><code>/diagnostics</code></td>
+<td>diagnostic_msgs::msg::DiagnosticArray</td>
+<td>diagnostics</td>
+</tr>
+</tbody>
+</table>
+<h2 id="diagnostics">Diagnostics<a class="headerlink" href="#diagnostics" title="Permanent link">#</a></h2>
+<h3 id="pose_initializer_status">pose_initializer_status<a class="headerlink" href="#pose_initializer_status" title="Permanent link">#</a></h3>
+<p>If the score of initial pose estimation result is lower than score threshold, ERROR message is output to the <code>/diagnostics</code> topic.</p>
+<p><img src="./media/diagnostic_pose_reliability.png" alt="drawing" width="400"></p>
+<h2 id="connection-with-default-ad-api">Connection with Default AD API<a class="headerlink" href="#connection-with-default-ad-api" title="Permanent link">#</a></h2>
+<p>This <code>autoware_pose_initializer</code> is used via default AD API. For detailed description of the API description, please refer to <a href="https://github.com/autowarefoundation/autoware_universe/blob/main/system/autoware_default_adapi_universe/document/localization.md">the description of <code>autoware_default_adapi</code></a>.</p>
+<p><img src="https://github.com/autowarefoundation/autoware_universe/blob/main/system/autoware_default_adapi_universe/document/images/localization.drawio.svg" alt="drawing" width="800"></p>
+<h2 id="initialize-pose-via-cli">Initialize pose via CLI<a class="headerlink" href="#initialize-pose-via-cli" title="Permanent link">#</a></h2>
+<h3 id="using-the-gnss-estimated-position">Using the GNSS estimated position<a class="headerlink" href="#using-the-gnss-estimated-position" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>ros2<span class="w"> </span>service<span class="w"> </span>call<span class="w"> </span>/localization/initialize<span class="w"> </span>autoware_internal_localization_msgs/srv/InitializeLocalization
+</code></pre></div>
+<p>The GNSS estimated position is used as the initial guess, and the localization algorithm automatically estimates a more accurate position.</p>
+<h3 id="using-the-input-position">Using the input position<a class="headerlink" href="#using-the-input-position" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>ros2<span class="w"> </span>service<span class="w"> </span>call<span class="w"> </span>/localization/initialize<span class="w"> </span>autoware_internal_localization_msgs/srv/InitializeLocalization<span class="w"> </span><span class="s2">"</span>
+<span class="s2">pose_with_covariance:</span>
+<span class="s2">  - header:</span>
+<span class="s2">      frame_id: map</span>
+<span class="s2">    pose:</span>
+<span class="s2">      pose:</span>
+<span class="s2">        position:</span>
+<span class="s2">          x: 89571.1640625</span>
+<span class="s2">          y: 42301.1875</span>
+<span class="s2">          z: -3.1565165519714355</span>
+<span class="s2">        orientation:</span>
+<span class="s2">          x: 0.0</span>
+<span class="s2">          y: 0.0</span>
+<span class="s2">          z: 0.28072773940524687</span>
+<span class="s2">          w: 0.9597874433062874</span>
+<span class="s2">      covariance: [0.25, 0, 0, 0, 0, 0, 0, 0.25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.06853891909122467]</span>
+<span class="s2">method: 0</span>
+<span class="s2">"</span>
+</code></pre></div>
+<p>The input position is used as the initial guess, and the localization algorithm automatically estimates a more accurate position.</p>
+<h3 id="direct-initial-position-set">Direct initial position set<a class="headerlink" href="#direct-initial-position-set" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>ros2<span class="w"> </span>service<span class="w"> </span>call<span class="w"> </span>/localization/initialize<span class="w"> </span>autoware_internal_localization_msgs/srv/InitializeLocalization<span class="w"> </span><span class="s2">"</span>
+<span class="s2">pose_with_covariance:</span>
+<span class="s2">  - header:</span>
+<span class="s2">      frame_id: map</span>
+<span class="s2">    pose:</span>
+<span class="s2">      pose:</span>
+<span class="s2">        position:</span>
+<span class="s2">          x: 89571.1640625</span>
+<span class="s2">          y: 42301.1875</span>
+<span class="s2">          z: -3.1565165519714355</span>
+<span class="s2">        orientation:</span>
+<span class="s2">          x: 0.0</span>
+<span class="s2">          y: 0.0</span>
+<span class="s2">          z: 0.28072773940524687</span>
+<span class="s2">          w: 0.9597874433062874</span>
+<span class="s2">      covariance: [0.25, 0, 0, 0, 0, 0, 0, 0.25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.06853891909122467]</span>
+<span class="s2">method: 1</span>
+<span class="s2">"</span>
+</code></pre></div>
+<p>The initial position is set directly by the input position without going through localization algorithm.</p>
+<h3 id="via-ros2-topic-pub">Via ros2 topic pub<a class="headerlink" href="#via-ros2-topic-pub" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span>--once<span class="w"> </span>/initialpose<span class="w"> </span>geometry_msgs/msg/PoseWithCovarianceStamped<span class="w"> </span><span class="s2">"</span>
+<span class="s2">header:</span>
+<span class="s2">  frame_id: map</span>
+<span class="s2">pose:</span>
+<span class="s2">  pose:</span>
+<span class="s2">    position:</span>
+<span class="s2">      x: 89571.1640625</span>
+<span class="s2">      y: 42301.1875</span>
+<span class="s2">      z: 0.0</span>
+<span class="s2">    orientation:</span>
+<span class="s2">      x: 0.0</span>
+<span class="s2">      y: 0.0</span>
+<span class="s2">      z: 0.28072773940524687</span>
+<span class="s2">      w: 0.9597874433062874</span>
+<span class="s2">"</span>
+</code></pre></div>
+<p>It behaves the same as "initialpose (from rviz)".
+The position.z and the covariance will be overwritten by <a href="https://github.com/autowarefoundation/autoware_universe/tree/main/system/autoware_default_adapi_helpers/autoware_adapi_adaptors">autoware_adapi_adaptors</a>, so there is no need to input them.</p></div>
 
 
 
@@ -4515,7 +4912,7 @@ cspell:ignore Kenji, Koide
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../../../" class="md-footer__link md-footer__link--prev" aria-label="Previous: autoware_ndt_scan_matcher" rel="prev">
+          <a href="../autoware_ndt_scan_matcher/include/autoware/ndt_scan_matcher/ndt_omp/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ndt_omp" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -4524,20 +4921,20 @@ cspell:ignore Kenji, Koide
                 Previous
               </span>
               <div class="md-ellipsis">
-                autoware_ndt_scan_matcher
+                ndt_omp
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../../../../autoware_pose_initializer/" class="md-footer__link md-footer__link--next" aria-label="Next: autoware_pose_initializer" rel="next">
+          <a href="../autoware_stop_filter/" class="md-footer__link md-footer__link--next" aria-label="Next: stop_filter" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                autoware_pose_initializer
+                stop_filter
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4573,13 +4970,13 @@ cspell:ignore Kenji, Koide
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer"], "search": "../../../../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
         
-          <script src="../../../../../../docs/assets/js/mathjax.js"></script>
+          <script src="../../docs/assets/js/mathjax.js"></script>
         
       
         
